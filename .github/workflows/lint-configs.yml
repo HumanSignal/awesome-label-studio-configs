@@ -1,0 +1,34 @@
+name: Lint Configs
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-configs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          # xmllint is part of libxml2-utils
+          sudo apt-get install -y libxml2-utils
+          # Install node + JSONLint
+          sudo apt-get install -y nodejs npm
+          sudo npm install -g jsonlint
+
+      - name: Lint XML files
+        run: |
+          echo "Linting XML files..."
+          # If there are no XML files, 'find' may fail with xargs, so we handle gracefully:
+          find configs/ -name "*.xml" -print0 | xargs -0 -I {} xmllint --noout {}
+
+      - name: Lint JSON files
+        run: |
+          echo "Linting JSON files..."
+          find configs/ -name "*.json" -print0 | xargs -0 -I {} jsonlint -q {}
