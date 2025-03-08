@@ -12,7 +12,7 @@ We love your input! Help us improve and grow.
 
 ## Adding a New Label Config
 
-- Create a subfolder under `configs/` with a clear name (e.g. `configs/my-cool-config`).
+- Create a subfolder under `label-configs/` with a clear name (e.g. `label-configs/my-cool-config`).
 - Add:
   1. **A label config file** (XML or JSON).
   2. **Sample data** (e.g., tasks in JSON).

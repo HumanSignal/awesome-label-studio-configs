@@ -16,7 +16,7 @@ After picking a sentiment, a second-level classification appears to categorize t
 
 - **Author**: [@luarmr](https://github.com/luarmr)
 - **Contributors**:
-  - [@another-contributor](https://github.com/another-contributor)
+  - [@bmartel](https://github.com/bmartel)
 
 
 ---

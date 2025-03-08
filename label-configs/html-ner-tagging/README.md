@@ -15,7 +15,8 @@ It highlights recognized entities (Person, Organization) within styled HTML text
 
 - **Author**: [@luarmr](https://github.com/luarmr)
 - **Contributors**:
-  - [@another-contributor](https://github.com/another-contributor)
+- **Contributors**:
+  - [@bmartel](https://github.com/bmartel)
 
 
 ---

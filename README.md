@@ -71,7 +71,7 @@ We welcome all contributions!
 If you want to add your own config:
 
 1. Fork this repository.
-2. Create a new folder under `configs/` for your task (e.g., `configs/audio-classification/`).
+2. Create a new folder under `label-configs/` for your task (e.g., `label-configs/audio-classification/`).
 3. Add:
    - A label config file (`.xml` or `.json`).
    - Sample data (e.g., `.json`) showing how to test the config.

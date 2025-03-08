@@ -1,0 +1,29 @@
+{
+  "$schema": "https://labelstud.io/schemas/label-config.json",
+  "name": "two-level-classification",
+  "title": "Two-Level Text Classification",
+  "description": "This labeling config lets you assign a sentiment (Positive, Negative, or Neutral) to a piece of text. After picking a sentiment, a second-level classification appears to categorize the text as Descriptive or Emotional.",
+  "author": "luarmr",
+  "contributors": [
+    "bmartel"
+  ],
+  "categories": [
+    "natural language processing"
+  ],
+  "configTags": [
+    "Text",
+    "Choices",
+    "Choice",
+    "View",
+    "Header"
+  ],
+  "keywords": [
+    "classification",
+    "sentiment analysis",
+    "text",
+    "conditional",
+    "multi-level"
+  ],
+  "license": "MIT",
+  "version": "1.0.0"
+}
