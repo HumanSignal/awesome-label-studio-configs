@@ -39,7 +39,7 @@ If you prefer to run Label Studio locally:
 2. **Create a new project** with your chosen config:
    ```bash
    label-studio init my-project \
-     --input-path path/to/sample_data.json \
+     --input-path path/to/sample-data.json \
      --input-format json \
      --label-config path/to/your-config.xml
    ```
