@@ -1,0 +1,199 @@
+{
+  "$id": "https://labelstud.io/schemas/label-config.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "title": "Label Studio Manifest Configuration Schema",
+  "description": "Schema for Label Studio configuration manifest files",
+  "$defs": {
+    "keywords": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[^,\\r\\n\\t]+$",
+        "maxLength": 30,
+        "minLength": 1
+      },
+      "title": "Searchable terms",
+      "maxItems": 12,
+      "minItems": 0,
+      "description": "Keywords that help users find this Label Studio configuration when searching.",
+      "uniqueItems": true
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "computer vision",
+        "natural language processing",
+        "audio/speech processing",
+        "conversational ai",
+        "ranking and scoring",
+        "structured data parsing",
+        "time series analysis",
+        "videos",
+        "llm fine-tuning",
+        "llm evaluations"
+      ]
+    },
+    "configTag": {
+      "type": "string",
+      "enum": [
+        "Audio",
+        "Brush",
+        "BrushLabels",
+        "Choice",
+        "Choices",
+        "DateTime",
+        "Ellipse",
+        "EllipseLabels",
+        "Filter",
+        "Header",
+        "HTML",
+        "HyperText",
+        "HyperTextLabels",
+        "Image",
+        "KeyPoint",
+        "KeyPointLabels",
+        "Label",
+        "Labels",
+        "List",
+        "Magicwand",
+        "NER",
+        "Number",
+        "Pairwise",
+        "Paragraphs",
+        "ParagraphLabels",
+        "Polygon",
+        "PolygonLabels",
+        "Ranker",
+        "Rating",
+        "Rectangle",
+        "RectangleLabels",
+        "Relation",
+        "Relations",
+        "Shortcut",
+        "Style",
+        "Table",
+        "Taxonomy",
+        "Text",
+        "TextArea",
+        "TimeSeries",
+        "TimeSeriesLabels",
+        "TimelineLabels",
+        "Video",
+        "VideoRectangle",
+        "View"
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "title",
+    "author",
+    "license",
+    "description",
+    "categories",
+    "configTags",
+    "version"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Configuration identifier",
+      "pattern": "^(@workaround/)?[a-z0-9-~][a-z0-9-_~]*$",
+      "maxLength": 100,
+      "minLength": 3,
+      "description": "The unique identifier for this labeling configuration used in URLs and file paths."
+    },
+    "title": {
+      "type": "string",
+      "title": "Human-friendly configuration name",
+      "pattern": "^[^\\s]+(?: [^\\s]+)*$",
+      "maxLength": 100,
+      "minLength": 2,
+      "description": "Display name for this labeling configuration shown in the Label Studio interface."
+    },
+    "author": {
+      "type": "string",
+      "title": "Configuration author",
+      "pattern": "^[a-zA-Z0-9-*~][a-zA-Z0-9-*._~]*$",
+      "maxLength": 75,
+      "minLength": 2,
+      "description": "GitHub username of the original author of this Label Studio configuration."
+    },
+    "license": {
+      "const": "MIT",
+      "title": "License",
+      "description": "The license governing this Label Studio configuration (currently only MIT is accepted)."
+    },
+    "keywords": {"$ref": "#/$defs/keywords"},
+    "description": {
+      "type": "string",
+      "title": "Configuration description",
+      "pattern": "^[^\\s]+(\\s+[^\\s]+)*$",
+      "maxLength": 2048,
+      "minLength": 16,
+      "description": "Detailed explanation of what this Label Studio configuration does and how to use it."
+    },
+    "categories": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/category"},
+      "minItems": 1,
+      "maxItems": 3,
+      "description": "The types of annotation tasks this configuration supports.",
+      "uniqueItems": true
+    },
+    "configTags": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/configTag"},
+      "minItems": 1,
+      "maxItems": 5,
+      "description": "Label Studio tags used in this configuration (e.g., Text, Image, RectangleLabels).",
+      "uniqueItems": true
+    },
+    "contributors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9-*~][a-zA-Z0-9-*._~]*$",
+        "maxLength": 75,
+        "minLength": 2
+      },
+      "title": "Contributors",
+      "minItems": 0,
+      "description": "GitHub usernames of people who have contributed to this Label Studio configuration.",
+      "uniqueItems": true
+    },
+    "pastContributors": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-zA-Z0-9-*~][a-zA-Z0-9-*._~]*$",
+        "maxLength": 75,
+        "minLength": 2
+      },
+      "title": "Past contributors",
+      "minItems": 0,
+      "description": "GitHub usernames of people who have previously contributed but are no longer active.",
+      "uniqueItems": true
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^label-configs/[a-z0-9-][a-z0-9-_]*$",
+        "maxLength": 100,
+        "minLength": 16
+      },
+      "title": "Related configurations",
+      "minItems": 0,
+      "description": "Paths to related configurations in this repository, including the 'label-configs/' prefix.",
+      "uniqueItems": true
+    },
+    "version": {
+      "type": "string",
+      "title": "Version",
+      "description": "Semantic version of this Label Studio configuration",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$"
+    }
+  }
+}
