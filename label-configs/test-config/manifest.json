@@ -1,0 +1,28 @@
+{
+  "$schema": "https://labelstud.io/schemas/label-config.json",
+  "name": "test-config",
+  "title": "HTML NER Tagging",
+  "description": "This labeling config uses HyperText elements for named entity recognition on HTML content. It highlights recognized entities (Person, Organization) within styled HTML text.",
+  "author": "luarmr",
+  "contributors": [
+    "bmartel"
+  ],
+  "keywords": [
+    "ner",
+    "html",
+    "named entity",
+    "hypertext",
+    "entity recognition"
+  ],
+  "categories": [
+    "natural language processing"
+  ],
+  "configTags": [
+    "HyperText",
+    "HyperTextLabels",
+    "Label",
+    "View"
+  ],
+  "license": "MIT",
+  "version": "1.0.0"
+}
