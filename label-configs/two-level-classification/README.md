@@ -7,7 +7,7 @@ After picking a sentiment, a second-level classification appears to categorize t
 
 ## Preview
 
-![two-level-classification-preview](./two-level-classification-preview.gif)
+![two-level-classification-preview](./preview/two-level-classification-preview.gif)
 
 
 ---
