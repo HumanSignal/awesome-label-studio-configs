@@ -32,22 +32,22 @@ Visit the [Label Studio Playground](https://labelstud.io/playground/) and **past
 If you prefer to run Label Studio locally:
 
 1. **Install Label Studio** (if you haven’t yet):
-   ```bash
-   pip install label-studio
-   ```
+```bash
+pip install label-studio
+```
 
 2. **Create a new project** with your chosen config:
-   ```bash
-   label-studio init my-project \
-     --input-path path/to/sample-data.json \
-     --input-format json \
-     --label-config path/to/your-config.xml
-   ```
+```bash
+label-studio init my-project \
+  --input-path path/to/sample-data.json \
+  --input-format json \
+  --label-config path/to/your-config.xml
+```
 
 3. **Start Label Studio**:
-   ```bash
-   label-studio start my-project
-   ```
+```bash
+label-studio start my-project
+```
 
 4. Open the Label Studio UI (usually [http://localhost:8080](http://localhost:8080)) and start labeling with your config!
 
@@ -75,8 +75,24 @@ If you want to add your own config:
 3. Add:
    - A label config file (`.xml` or `.json`).
    - Sample data (e.g., `.json`) showing how to test the config.
-   - A mini `README.md` with a screenshot (`.png`/`.gif`) and short explanation.
-4. Open a Pull Request describing your changes.
+   - A mini `README.md` with explanations and references to screenshots.
+   - A `preview/` folder containing screenshots or GIFs showing your config in action.
+   - A `manifest.json` file with metadata about your config.
+4. Set up validation tools (this only needs to be done once):
+
+   ```bash
+   pip install pre-commit check-jsonschema
+   pre-commit install --hook-type pre-push
+   ```
+
+   This will automatically validate your changes when you push.
+
+   **Note:** The first time you push, pre-commit will show "Initializing environment" messages and may take 
+   a few minutes to set up. Subsequent runs will be much faster.
+
+5. Open a Pull Request describing your changes.
+
+For more detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 

@@ -1,0 +1,61 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: check-json
+        stages: [pre-push]
+      - id: check-xml
+        stages: [pre-push]
+
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.27.2
+    hooks:
+      - id: check-jsonschema
+        name: Validate manifest schema
+        args: ["--schemafile", "schemas/label-config.json"]
+        files: label-configs/.*/manifest\.json$
+        stages: [pre-push]
+        types: [json]
+
+  - repo: local
+    hooks:
+      - id: check-directory-structure
+        name: Check directory structure
+        entry: |
+          bash -c '
+          set -euo pipefail
+          echo "Checking directory structure..."
+          exit_code=0
+          for dir in label-configs/*/; do
+            if [ ! -d "$dir" ]; then
+              continue
+            fi
+            config_name=$(basename "$dir")
+            echo "Checking $config_name..."
+            missing=0
+
+            # Check required files
+            [ ! -f "${dir}manifest.json" ] && echo "❌ Missing manifest.json" && missing=1
+            [ ! -f "${dir}label-config.xml" ] && echo "❌ Missing label-config.xml" && missing=1
+            [ ! -f "${dir}README.md" ] && echo "❌ Missing README.md" && missing=1
+            [ ! -f "${dir}sample-data.json" ] && echo "❌ Missing sample-data.json" && missing=1
+            [ ! -d "${dir}preview" ] && echo "❌ Missing preview directory" && missing=1
+
+            # Check name matching
+            if [ -f "${dir}manifest.json" ]; then
+              manifest_name=$(grep -o "\"name\":[[:space:]]*\"[^\"]*\"" "${dir}manifest.json" | cut -d"\"" -f4)
+              [ "$config_name" != "$manifest_name" ] && echo "❌ Directory name ($config_name) doesnt match manifest name ($manifest_name)" && missing=1
+            fi
+
+            # Check kebab-case
+            [[ ! "$config_name" =~ ^[a-z0-9]([-a-z0-9]*[a-z0-9])?$ ]] && echo "❌ Directory name doesnt follow kebab-case" && missing=1
+
+            [ $missing -ne 0 ] && exit_code=1 || echo "✅ Valid"
+          done
+          exit $exit_code
+          '
+        language: system
+        files: label-configs/.*/
+        pass_filenames: false
+        stages: [pre-push]

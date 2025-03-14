@@ -1,4 +1,4 @@
-name: Lint Configs
+name: Validate Configs
 
 on:
   push:
@@ -7,28 +7,69 @@ on:
     branches: [main]
 
 jobs:
-  lint-configs:
+  validate-configs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+          
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
+          pip install check-jsonschema
           sudo apt-get update
-          # xmllint is part of libxml2-utils
           sudo apt-get install -y libxml2-utils
-          # Install node + JSONLint
-          sudo apt-get install -y nodejs npm
-          sudo npm install -g jsonlint
 
-      - name: Lint XML files
+      - name: Check JSON files
         run: |
-          echo "Linting XML files..."
-          # If there are no XML files, 'find' may fail with xargs, so we handle gracefully:
-          find configs/ -name "*.xml" -print0 | xargs -0 -I {} xmllint --noout {}
+          echo "Checking JSON files..."
+          find . -name "*.json" -type f -exec python -m json.tool {} >/dev/null \; || exit 1
+      
+      - name: Check XML files
+        run: |
+          echo "Checking XML files..."
+          find . -name "*.xml" -type f -exec xmllint --noout {} \; || exit 1
 
-      - name: Lint JSON files
+      - name: Check manifest schema
         run: |
-          echo "Linting JSON files..."
-          find configs/ -name "*.json" -print0 | xargs -0 -I {} jsonlint -q {}
+          echo "Validating manifest schema..."
+          for file in label-configs/*/manifest.json; do
+            echo "Validating $file..."
+            check-jsonschema --schemafile schemas/label-config.json "$file" || exit 1
+          done
+      
+      - name: Check directory structure
+        run: |
+          echo "Checking directory structure..."
+          for dir in label-configs/*/; do
+            if [ ! -d "$dir" ]; then
+              continue
+            fi
+            config_name=$(basename "$dir")
+            echo "Checking $config_name..."
+            missing=0
+
+            # Check required files
+            [ ! -f "${dir}manifest.json" ] && echo "❌ Missing manifest.json" && missing=1
+            [ ! -f "${dir}label-config.xml" ] && echo "❌ Missing label-config.xml" && missing=1
+            [ ! -f "${dir}README.md" ] && echo "❌ Missing README.md" && missing=1
+            [ ! -f "${dir}sample-data.json" ] && echo "❌ Missing sample-data.json" && missing=1
+            [ ! -d "${dir}preview" ] && echo "❌ Missing preview directory" && missing=1
+
+            # Check name matching
+            if [ -f "${dir}manifest.json" ]; then
+              manifest_name=$(grep -o "\"name\":[[:space:]]*\"[^\"]*\"" "${dir}manifest.json" | cut -d"\"" -f4)
+              [ "$config_name" != "$manifest_name" ] && echo "❌ Directory name ($config_name) doesnt match manifest name ($manifest_name)" && missing=1
+            fi
+
+            # Check kebab-case
+            [[ ! "$config_name" =~ ^[a-z0-9]([-a-z0-9]*[a-z0-9])?$ ]] && echo "❌ Directory name doesnt follow kebab-case" && missing=1
+
+            # Report status
+            [ $missing -ne 0 ] && exit 1 || echo "✅ Valid"
+          done
