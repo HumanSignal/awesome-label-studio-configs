@@ -1,13 +1,14 @@
 # Two-Level Text Classification
 
-This labeling config lets you assign a **sentiment** (Positive, Negative, or Neutral) to a piece of text.
-After picking a sentiment, a second-level classification appears to categorize the text as _Descriptive_ or _Emotional_.
+This labeling config lets you assign a **sentiment** (Positive, Negative, or Neutral) to X / Twitter post. 
+After picking a sentiment, a second-level classification appears to categorize the text as _Descriptive_, _Emotional_, _Mixed_, _Ambigous_, or _Sarcams_. 
+The labeling interface is styled to look like a X / Twitter post."
 
 ---
 
 ## Preview
 
-![two-level-classification-preview](./preview/two-level-classification-preview.gif)
+![two-level-classification-preview](./preview/two-level-classification-of-x-twitter-posts.gif)
 
 ---
 
@@ -16,6 +17,7 @@ After picking a sentiment, a second-level classification appears to categorize t
 - **Author**: [@luarmr](https://github.com/luarmr)
 - **Contributors**:
   - [@bmartel](https://github.com/bmartel)
+  - [@redeipirati](https://github.com/redeipirati)
 
 ---
 

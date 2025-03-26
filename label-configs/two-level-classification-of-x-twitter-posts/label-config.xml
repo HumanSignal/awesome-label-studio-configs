@@ -1,0 +1,72 @@
+<View>
+  <View 
+    style="
+      border: 1px solid #e1e8ed;
+      border-radius: 8px;
+      padding: 10px;
+      max-width: 500px;
+      background-color: #fff;
+      font-family: Arial, sans-serif;
+    "
+  >
+    <View 
+      style="
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      "
+    >
+      <View 
+        style="
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: #ccc;
+          background-image: url('https://randomuser.me/api/portraits/men/3.jpg');
+          background-size: cover;
+        "
+      ></View>
+      <Header name="username" value="John Doe" />
+      <Text name="handle" value="@johndoe" style="color:gray;" />
+      <Text name="timestamp" value="· 2 hrs ago" style="color:gray;" />
+    </View>
+    <View style="margin-top: 8px;">
+      <Text name="tweet" value="$tweet" />
+    </View>
+    <View 
+      style="
+        display: flex;
+        justify-content: space-between;
+        font-size: 12px;
+        color: #657786;
+        margin-top: 20px;
+      "
+    >
+      <Text name="comments" value="💬 10" />
+      <Text name="retweets" value="🔁 3" />
+      <Text name="likes" value="❤️ 7" />
+      <Text name="views" value="📊 134" />
+      <Text name="other" value="🔖 ⬆" />
+    </View>
+  </View>
+
+  <Choices name="sentiment" toName="tweet" choice="single">
+    <Choice value="Positive" hint="Click on it if it says something nice or good" />
+    <Choice value="Neutral" hint="Click on it if overall it doesn't express any sentiment" />
+    <Choice value="Negative" hint="Click on if it says something bad or unpleasant" />
+  </Choices>
+  
+  <Choices name="other-props" toName="tweet"
+           choice="multiple" showInLine="true"
+           visibleWhen="choice-selected"
+           whenTagName="sentiment">
+    <View style="width:100%">
+      <Header value="Other properties of the post" />
+    </View>
+    <Choice value="Descriptive" />
+    <Choice value="Emotional" hint="if it shows moderate to strong sentiment" />
+    <Choice value="Mixed" hint="if multiple conflicting sentiments are present"/>
+    <Choice value="Ambigous" hint="if it is irrelevant or unclear"/>
+    <Choice value="Sarcams" hint="if it shows ironic or sarcastic content"/>
+  </Choices>
+</View>
