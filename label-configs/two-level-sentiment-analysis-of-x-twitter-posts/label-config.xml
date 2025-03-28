@@ -1,4 +1,8 @@
 <View>
+  <!-- CSS fix for the legacy plaground -->
+  <Style>
+    .htx-text{padding:0; background: transparent; border:none;}
+  </Style>
   <View 
     style="
       border: 1px solid #e1e8ed;
@@ -64,9 +68,9 @@
       <Header value="Other properties of the post" />
     </View>
     <Choice value="Descriptive" />
-    <Choice value="Emotional" hint="if it shows moderate to strong sentiment" />
-    <Choice value="Mixed" hint="if multiple conflicting sentiments are present"/>
-    <Choice value="Ambigous" hint="if it is irrelevant or unclear"/>
-    <Choice value="Sarcams" hint="if it shows ironic or sarcastic content"/>
+    <Choice value="Emotional" hint="Click on it if it shows moderate to strong sentiment" />
+    <Choice value="Mixed" hint="Click on it if multiple conflicting sentiments are present"/>
+    <Choice value="Ambigous" hint="Click on it if it is irrelevant or unclear"/>
+    <Choice value="Sarcams" hint="Click on it if it shows ironic or sarcastic content"/>
   </Choices>
 </View>
