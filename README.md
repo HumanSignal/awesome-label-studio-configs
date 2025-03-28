@@ -99,7 +99,7 @@ For more detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md
 ## Extra Resources
 
 - **Official Docs**: [Label Studio Documentation](https://labelstud.io)
-- **GitHub Repo**: [Label Studio on GitHub](https://github.com/heartexlabs/label-studio)
+- **GitHub Repo**: [Label Studio on GitHub](https://github.com/HumanSignal/label-studio/)
 - **Community**: Check out Slack or Discord channels mentioned in the official docs.
 
 ---
@@ -113,4 +113,4 @@ Let’s build the ultimate set of label configs together!
 
 ## License
 
-This software is licensed under the [Apache 2.0 LICENSE](/LICENSE) © [Heartex](https://www.heartex.com/). 2020-2024
+This software is licensed under the [Apache 2.0 LICENSE](/LICENSE) © [HumanSignal](https://humansignal.com/). 2020-2025
