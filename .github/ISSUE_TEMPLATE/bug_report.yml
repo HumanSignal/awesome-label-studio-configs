@@ -1,9 +1,7 @@
----
 name: Bug Report
-about: Report a bug in a Label Studio configuration
+description: Report a bug in a Awesome Label Studio Config
 title: "[BUG] "
-labels: bug
-assignees: ''
+labels: ["bug"]
 body:
   - type: markdown
     attributes:
@@ -79,4 +77,3 @@ body:
         - Not sure
     validations:
       required: false
----

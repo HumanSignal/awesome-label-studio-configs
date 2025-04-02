@@ -1,14 +1,12 @@
----
 name: Feature Request
-about: Suggest a new config or improvement
+description: Suggest a new config or improvement
 title: "[FEATURE] "
-labels: enhancement
-assignees: ''
+labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for suggesting an improvement to our Label Studio configurations!
+        Thank you for suggesting an improvement to the Awesome Label Studio Config!
         
   - type: dropdown
     id: feature-type
@@ -73,13 +71,10 @@ body:
     validations:
       required: false
       
-  - type: checkbox
+  - type: checkboxes
     id: contribution-interest
     attributes:
       label: Contribution Interest
       description: Would you be interested in contributing this yourself?
       options:
         - label: Yes, I'd like to implement this feature
-    validations:
-      required: false
----
