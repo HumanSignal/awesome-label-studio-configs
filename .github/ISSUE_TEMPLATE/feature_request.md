@@ -1,19 +1,85 @@
 ---
 name: Feature Request
-about: Suggest an idea for this project
+about: Suggest a new config or improvement
 title: "[FEATURE] "
 labels: enhancement
 assignees: ''
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement to our Label Studio configurations!
+        
+  - type: dropdown
+    id: feature-type
+    attributes:
+      label: Request Type
+      description: What type of feature are you requesting?
+      options:
+        - New label config
+        - Enhancement to existing config
+        - Repository improvement
+        - Documentation improvement
+        - Other
+    validations:
+      required: true
+      
+  - type: input
+    id: config-name
+    attributes:
+      label: Related Label Config
+      description: Which existing config does this relate to? (if applicable)
+      placeholder: e.g., html-ner-tagging
+    validations:
+      required: false
+      
+  - type: textarea
+    id: feature-description
+    attributes:
+      label: Feature Description
+      description: What would you like to see added or changed?
+      placeholder: I'd like to see a config that...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: How would this feature be used in labeling tasks?
+      placeholder: This would help with labeling tasks where...
+    validations:
+      required: true
+      
+  - type: textarea
+    id: references
+    attributes:
+      label: Examples or References
+      description: Any examples, mockups or references?
+      placeholder: Here are some similar examples or screenshots...
+    validations:
+      required: false
+      
+  - type: dropdown
+    id: edition
+    attributes:
+      label: Label Studio Edition
+      description: Which edition of Label Studio would this feature be for?
+      options:
+        - Both Open Source and Enterprise
+        - Open Source Community Edition only
+        - Enterprise Edition only
+        - Not sure
+    validations:
+      required: false
+      
+  - type: checkbox
+    id: contribution-interest
+    attributes:
+      label: Contribution Interest
+      description: Would you be interested in contributing this yourself?
+      options:
+        - label: Yes, I'd like to implement this feature
+    validations:
+      required: false
 ---
-
-**Is your feature request related to a specific labeling config or an overall workflow?**
-Provide some context for where your feature request fits.
-
-**Describe the solution you'd like**
-A clear and concise description of what you want to happen.
-
-**Describe alternatives you've considered**
-A clear and concise description of any alternative solutions or features you've considered.
-
-**Additional context**
-Include any other designs or references you find helpful.
