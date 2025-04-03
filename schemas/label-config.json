@@ -89,7 +89,6 @@
     "name",
     "title",
     "author",
-    "license",
     "description",
     "categories",
     "configTags",
@@ -119,11 +118,6 @@
       "maxLength": 75,
       "minLength": 2,
       "description": "GitHub username of the original author of this Label Studio configuration."
-    },
-    "license": {
-      "const": "MIT",
-      "title": "License",
-      "description": "The license governing this Label Studio configuration (currently only MIT is accepted)."
     },
     "keywords": {"$ref": "#/$defs/keywords"},
     "description": {
