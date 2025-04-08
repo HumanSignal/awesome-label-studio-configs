@@ -1,4 +1,4 @@
-# HTML NER Tagging
+# HTML NER Tagging of Person and Organization
 
 This labeling config uses **HyperText** elements for named entity recognition on HTML content.
 It highlights recognized entities (Person, Organization) within styled HTML text.

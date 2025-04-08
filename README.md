@@ -1,116 +1,96 @@
-# this repository still a WIP idea
+[![Slack Badge](https://img.shields.io/badge/Join%20the%20Slack%20community-4A154B?logo=slack&logoColor=white&style=for-the-badge)](https://slack.labelstud.io/?source=github-2)
+[![Discourse Badge](https://img.shields.io/badge/Join%20the%20Discourse%20community-000000?logo=discourse&logoColor=white&style=for-the-badge)](https://community.labelstud.io/)
 
-<img src="https://user-images.githubusercontent.com/12534576/192582340-4c9e4401-1fe6-4dbb-95bb-fdbba5493f61.png"/>
 
+<button Join the Discourse Forum>
 
+![Awesome Label Studio Configs](assets/banner-awesome-ls-configs.png)
 
 # Awesome Label Studio Configs
 
+A community-driven collection of Label Studio configs for various data annotation tasks—from bounding boxes and segmentation to text classification and more. Quickly find, test, and share configurations to accelerate your labeling workflow.
 
-A **community-driven** collection of Label Studio configs for a variety of annotation tasks—from bounding boxes on images to text classification and beyond. Our goal is to provide easy-to-use configurations that **streamline your labeling process** and **spark new ideas** in the Label Studio ecosystem.
+## 🚀 Get Started
 
----
-
-## Why This Project?
-
-- **Speed up your workflow**: Access ready-made configs for common tasks to quickly get started.
-- **Learn from examples**: Explore how others set up their labeling UIs to discover best practices.
-- **Community collaboration**: Share your own creative or advanced configs and help the Label Studio community grow.
-
-We believe that by **collectively** pooling our knowledge, everyone benefits—from new learners to advanced users.
-
----
-
-## Explore & Test
+You can quickly test these configs in two ways:
 
 ### Option 1: Label Studio Playground
 
-Visit the [Label Studio Playground](https://labelstud.io/playground/) and **paste** any of our config files (XML or JSON) into the “Labeling config” section. Then upload or choose a sample dataset to see the config in action.
+1. Visit the [Label Studio Playground](https://labelstud.io/playground/);
 
-### Option 2: Local Setup
+2. Paste any config (XML or JSON) into the Labeling Config section.
 
-If you prefer to run Label Studio locally:
+### Option 2: Run Locally
 
-1. **Install Label Studio** (if you haven’t yet):
+1. [Install Label Studio](https://labelstud.io/guide/install);
+
+2. [Start Label Studio](https://labelstud.io/guide/start);
+
+3. [Create a new project](https://labelstud.io/guide/setup_project);
+
+4. Paste any config (XML or JSON) into the [Labeling Interface](https://labelstud.io/guide/setup).
+
+### Option 3: Run on the Label Studio Cloud
+
+1. [Start your Free Trial](https://app.humansignal.com/user/cloud-trial?offer=d9a5) or [login into your account](https://app.humansignal.com/user/login/);
+
+2. [Create a new project](https://docs.humansignal.com/guide/setup_project);
+
+3. Paste any config (XML or JSON) into the [Labeling Interface](https://docs.humansignal.com/guide/setup).
+
+### 🤝 How to Contribute
+
+We welcome community contributions! Share your configs and help others annotate faster and better:
+
+1. Fork this repository;
+
+2. Create a new directory under `label-configs/` for your task (e.g., `label-configs/my-awesome-audio-classification/`);
+
+3. Add the following:
+
+- Label config file (.xml or .json);
+
+- Sample data file (.json) demonstrating the config;
+
+- A brief README.md explaining your config;
+
+- A `preview/` folder with screenshots or GIFs;
+
+- A `manifest.json` with metadata about your config;
+
+4. Validate your config (required once):
+
 ```bash
-pip install label-studio
+pip install pre-commit check-jsonschema
+pre-commit install --hook-type pre-push
 ```
 
-2. **Create a new project** with your chosen config:
-```bash
-label-studio init my-project \
-  --input-path path/to/sample-data.json \
-  --input-format json \
-  --label-config path/to/your-config.xml
-```
+5. Submit a Pull Request with a clear description.
 
-3. **Start Label Studio**:
-```bash
-label-studio start my-project
-```
+For more details, see CONTRIBUTING.md.
 
-4. Open the Label Studio UI (usually [http://localhost:8080](http://localhost:8080)) and start labeling with your config!
+## 💡 Why This Project?
 
----
+- **Speed up your workflow**: Quickly access ready-to-use configs to quickly get started.
 
-## Create & Share Your Own Config
+- **Learn from examples**: Explore community best practices and get access to adavanced layouts to improve the quality of your labeling workflow. 
 
-When designing new label configs, consider:
+- **Collaborate & Innovate**: Share your own configurations or improve an existing one to help others. Connect with contributors to learn more about their labeling configs and data labeling best practices.
 
-- **Visual Clarity**: Make it easy for annotators to see labels/tools at a glance.
-- **Practicality**: Ensure labels or tools reflect real-world needs (e.g., bounding boxes for objects, text choices for sentiment).
-- **Effectiveness**: Keep it simple but powerful—don’t overload your config with unnecessary features.
+We believe that by collectively pooling our knowledge, everyone benefits—from new learners to advanced users.
 
-A well-crafted label config can dramatically improve annotation quality and speed.
-
----
-
-## Contributing
-
-We welcome all contributions!  
-If you want to add your own config:
-
-1. Fork this repository.
-2. Create a new folder under `label-configs/` for your task (e.g., `label-configs/audio-classification/`).
-3. Add:
-   - A label config file (`.xml` or `.json`).
-   - Sample data (e.g., `.json`) showing how to test the config.
-   - A mini `README.md` with explanations and references to screenshots.
-   - A `preview/` folder containing screenshots or GIFs showing your config in action.
-   - A `manifest.json` file with metadata about your config.
-4. Set up validation tools (this only needs to be done once):
-
-   ```bash
-   pip install pre-commit check-jsonschema
-   pre-commit install --hook-type pre-push
-   ```
-
-   This will automatically validate your changes when you push.
-
-   **Note:** The first time you push, pre-commit will show "Initializing environment" messages and may take 
-   a few minutes to set up. Subsequent runs will be much faster.
-
-5. Open a Pull Request describing your changes.
-
-For more detailed contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).
-
----
-
-## Extra Resources
+## 📚 Extra Resources
 
 - **Official Docs**: [Label Studio Documentation](https://labelstud.io)
 - **GitHub Repo**: [Label Studio on GitHub](https://github.com/HumanSignal/label-studio/)
 - **Community**: Check out Slack or Discord channels mentioned in the official docs.
 
----
+## 🙏 Acknowledgments
 
-## Thanks & Happy Labeling!
+Special thanks to all contributors! Together, we're creating the most comprehensive, user-friendly collection of data labeling configurations.
 
-A huge thanks to all contributors who help make this collection richer and more diverse. With every new config, we make the labeling process faster, more intuitive, and fun for everyone.
+Happy Labeling!
 
-Let’s build the ultimate set of label configs together!
-
-
-## License
+## 📜 License
 
 This software is licensed under the [Apache 2.0 LICENSE](/LICENSE) © [HumanSignal](https://humansignal.com/). 2020-2025
