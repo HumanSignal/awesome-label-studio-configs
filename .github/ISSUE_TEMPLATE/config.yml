@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Label Studio Slack Community
+    url: https://slack.labelstud.io/?source=github-1
+    about: Ask questions and discuss with other users
+  - name: Label Studio Documentation
+    url: https://labelstud.io/guide/
+    about: Check out the official Label Studio documentation
+  - name: Label Studio Website
+    url: https://labelstud.io/
+    about: Visit the Label Studio website for more information
