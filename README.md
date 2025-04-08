@@ -1,4 +1,6 @@
-[![Slack Badge](https://img.shields.io/badge/Join%20our%20Slack%20community-4A154B?logo=slack&logoColor=white&style=for-the-badge)](https://slack.labelstud.io/?source=github-2)
+[![Slack Badge](https://img.shields.io/badge/Join%20the%20Slack%20community-4A154B?logo=slack&logoColor=white&style=for-the-badge)](https://slack.labelstud.io/?source=github-2)
+[![Discourse Badge](https://img.shields.io/badge/Join%20the%20Discourse%20community-000000?logo=discourse&logoColor=white&style=for-the-badge)](https://community.labelstud.io/)
+
 
 <button Join the Discourse Forum>
 
