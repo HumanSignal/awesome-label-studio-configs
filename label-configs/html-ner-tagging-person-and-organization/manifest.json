@@ -1,7 +1,8 @@
+
 {
   "$schema": "https://labelstud.io/schemas/label-config.json",
-  "name": " html-ner-tagging-person-and-organization",
-  "title": "HTML NER Tagging of Person and Organization",
+  "name": "html-ner-tagging",
+  "title": "HTML NER Tagging",
   "description": "This labeling config uses HyperText elements for named entity recognition on HTML content. It highlights recognized entities (Person, Organization) within styled HTML text.",
   "author": "luarmr",
   "contributors": [
@@ -23,6 +24,5 @@
     "Label",
     "View"
   ],
-  "license": "MIT",
   "version": "1.0.0"
 }
