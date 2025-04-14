@@ -19,8 +19,15 @@ Add the following required files:
 
 1. **A label config file** (XML or JSON)
 2. **Sample data** (e.g., tasks in JSON)
-3. **A README** that describes how to use it
-4. **A `preview/` folder** with screenshots/GIFs
+3. **A README** that includes:
+   - A clear title and description of the labeling config
+   - A preview section with screenshots/GIFs showing the config in action
+   - Author & Contributors section with GitHub usernames
+   - Special Instructions section explaining any unique features or requirements
+   - More Info section linking to the main repository README
+4. **A `preview/` folder** with:
+   - Screenshots/GIFs of the interface
+   - Any relevant visual documentation
 5. **A manifest.json file** with metadata about your config
 
 The manifest follows our JSON schema which will be validated during checks.
@@ -35,7 +42,11 @@ If you're improving an existing config:
    - Increment MINOR version for new functionality in a backward compatible manner
    - Increment PATCH version for backward compatible bug fixes
 3. **Update screenshots** if your changes affect the UI appearance
-4. **Explain your changes** in the PR description, including why they improve the config
+4. **Explain your changes** in the PR description, including:
+   - What was changed
+   - Why it was changed
+   - How it improves the config
+   - Any breaking changes
 5. **Ensure all validation checks pass** before submitting your PR
 
 ## Validation and Checks
@@ -61,7 +72,19 @@ This ensures that all contributions meet the requirements even if you didn't set
 
 ## Reviewing Pull Requests
 
-- Make sure your PR passes all automated checks.
-- A maintainer will review your changes and merge them once approved.
+- Make sure your PR passes all automated checks
+- A maintainer will review your changes and may request modifications
+- Address review comments promptly
+- Keep the PR focused and manageable in size
+- Update documentation as needed
+
+## Code of Conduct
+
+Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) to maintain a positive and inclusive community.
+
+## Questions and Support
+
+- Open an issue for bug reports or feature requests
+- Tag maintainers if your issue needs immediate attention
 
 Thank you for making this project better!
