@@ -1,0 +1,30 @@
+<View>
+  <Image name="image" value="$image" zoom="true" zoomControl="false"
+         rotateControl="true" width="100%" height="100%"
+         maxHeight="auto" maxWidth="auto"/>
+
+  <TextArea name="ocr_text" toName="image" value="$ocr_text"
+            editable="true"
+            perRegion="false"
+            required="false"
+            maxSubmissions="1"
+            rows="5"
+            placeholder="Recognized Text"
+            selectable="true"
+            granularity="word"
+            useModel="true" />
+
+  <Labels name="ner" toName="ocr_text" useModel="true">
+    <Label value="B-NIF" background="#ff5733"/>
+    <Label value="B-FORN" background="#33ff57"/>
+    <Label value="B-DATA" background="#3375ff"/>
+    <Label value="B-VALOR" background="#ff33a1"/>
+    <Label value="B-NUMFAT" background="#f3ff33"/>
+    <Label value="I-NIF" background="#ff5733"/>
+    <Label value="I-FORN" background="#33ff57"/>
+    <Label value="I-DATA" background="#3375ff"/>
+    <Label value="I-VALOR" background="#ff33a1"/>
+    <Label value="I-NUMFAT" background="#f3ff33"/>
+    <Label value="O" background="#aaa"/>
+  </Labels>
+</View>

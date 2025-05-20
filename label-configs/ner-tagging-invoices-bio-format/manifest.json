@@ -1,0 +1,29 @@
+{
+  "$schema": "https://labelstud.io/schemas/label-config.json",
+  "name": "ner-tagging-invoices-bio-format",
+  "title": "NER Tagging for Invoices (BIO Format)",
+  "description": "This labeling config enables Named Entity Recognition (NER) on invoice documents using the BIO (Beginning, Inside, Outside) format. It combines OCR text recognition with entity tagging for key invoice elements.",
+  "author": "meditas",
+  "contributors": [
+    "redeipirati"
+  ],
+  "keywords": [
+    "ner",
+    "ocr",
+    "invoices",
+    "document",
+    "bio-format",
+    "named-entity-recognition"
+  ],
+  "categories": [
+    "natural language processing",
+    "document processing"
+  ],
+  "configTags": [
+    "Image",
+    "TextArea",
+    "Labels",
+    "View"
+  ],
+  "version": "1.0.0"
+} 

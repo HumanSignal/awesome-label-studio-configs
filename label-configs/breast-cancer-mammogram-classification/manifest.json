@@ -1,0 +1,29 @@
+{
+  "$schema": "https://labelstud.io/schemas/label-config.json",
+  "name": "breast-cancer-mammogram-classification",
+  "title": "Breast Cancer Mammogram Classification",
+  "description": "This labeling config provides a comprehensive interface for breast cancer mammogram analysis using the BI-RADS classification system. It enables radiologists to classify mammograms, assess breast density, and document findings for both breasts.",
+  "author": "redeipirati",
+  "contributors": [],
+  "keywords": [
+    "medical",
+    "radiology",
+    "classification",
+    "healthcare",
+    "mammogram",
+    "breast-cancer",
+    "bi-rads"
+  ],
+  "categories": [
+    "medical imaging",
+    "healthcare"
+  ],
+  "configTags": [
+    "Image",
+    "Choices",
+    "TextArea",
+    "View",
+    "Header"
+  ],
+  "version": "1.0.0"
+} 
