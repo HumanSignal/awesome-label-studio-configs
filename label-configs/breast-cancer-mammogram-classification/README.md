@@ -6,7 +6,6 @@ This labeling config provides a comprehensive interface for breast cancer mammog
 
 ## Preview
 
-TOADD - preview 
 ![breast-cancer-mammogram-preview](./preview/breast-cancer-mammogram-preview.gif)
 
 ---
