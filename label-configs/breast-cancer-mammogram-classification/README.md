@@ -14,7 +14,7 @@ This labeling config provides a comprehensive interface for breast cancer mammog
 
 - **Author**: [@redeipirati](https://github.com/redeipirati)
 - **Contributors**:
-  - [] 
+  - [@carly-bartel](https://github.com/carly-bartel)
 
 ---
 

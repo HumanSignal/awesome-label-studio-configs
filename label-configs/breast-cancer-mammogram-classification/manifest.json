@@ -4,7 +4,7 @@
   "title": "Breast Cancer Mammogram Classification",
   "description": "This labeling config provides a comprehensive interface for breast cancer mammogram analysis using the BI-RADS classification system. It enables radiologists to classify mammograms, assess breast density, and document findings for both breasts.",
   "author": "redeipirati",
-  "contributors": [],
+  "contributors": ["carly-bartel"],
   "keywords": [
     "medical",
     "radiology",
@@ -15,8 +15,7 @@
     "bi-rads"
   ],
   "categories": [
-    "medical imaging",
-    "healthcare"
+    "computer vision"
   ],
   "configTags": [
     "Image",
