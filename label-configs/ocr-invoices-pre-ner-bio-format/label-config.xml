@@ -1,0 +1,28 @@
+<View style="display: flex; align-items: flex-start; gap: 1em;">
+  <!-- Left panel: labels + filter -->
+  <View style="min-width: 250px; padding: 0.5em; background: #f7f7f7; border-radius: 4px;">
+    <Header value="NER Tags" />
+    <Labels name="ner" toName="text" showInline="false">
+      <Label value="B-NIF"    background="#FF5733" />
+      <Label value="B-FORN"   background="#33FF57" />
+      <Label value="B-DATA"   background="#3375FF" />
+      <Label value="B-VALOR"  background="#FF33A1" />
+      <Label value="B-NUMFAT" background="#F3FF33" />
+      <Label value="I-NIF"    background="#FF5733" />
+      <Label value="I-FORN"   background="#33FF57" />
+      <Label value="I-DATA"   background="#3375FF" />
+      <Label value="I-VALOR"  background="#FF33A1" />
+      <Label value="I-NUMFAT" background="#F3FF33" />
+      <Label value="O"        background="#aaa"    />
+    </Labels>
+  </View>
+
+  <!-- Right panel: text to annotate -->
+  <View style="flex: 1; max-height: 80vh; overflow-y: auto;">
+    <Text
+      name="text"
+      value="$ocr"
+      granularity="word"
+    />
+  </View>
+</View>
