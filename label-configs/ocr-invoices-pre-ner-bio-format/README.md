@@ -13,7 +13,9 @@ This labeling config enables the first step of Named Entity Recognition (NER) on
 ## Author & Contributors
 
 - **Author**: [@meditas](https://community.labelstud.io/u/meditas/summary)
-- **Contributors**: [@redeipirati](https://github.com/redeipirati)
+- **Contributors**: 
+    - [@redeipirati](https://github.com/redeipirati)
+    - [@carly-bartel](https://github.com/carly-bartel)
 
 ---
 
@@ -25,11 +27,17 @@ This configuration provides a streamlined interface for OCR text verification an
 
 Before using this configuration, ensure your invoice images are preprocessed with an OCR model:
 
-- Full text content
-- Word-level bounding boxes
-- Initial "O" labels for all words
 
-Supported OCR engines: Tesseract OCR, Azure Form Recognizer, LayoutLM, or other compatible engines.
+1. **OCR Preprocessing**: Run an OCR engine on your invoice images before importing them into Label Studio. You can use:
+   - Tesseract OCR
+   - Azure Form Recognizer
+   - LayoutLM
+   - Other OCR engines
+
+2. **Data Format**: Ensure your OCR results include:
+   - The full text content
+   - Word-level bounding boxes
+   - Initial "O" labels for all words
 
 A complete working example with an ML backend implementation can be found in the [Label Studio Community Forum](https://community.labelstud.io/t/label-studio-not-presenting-the-labels-and-ocr-text/530).
 

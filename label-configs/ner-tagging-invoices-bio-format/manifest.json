@@ -4,8 +4,7 @@
   "title": "NER Tagging for Invoices (BIO Format)",
   "description": "This labeling config enables Named Entity Recognition (NER) on invoice documents using the BIO (Beginning, Inside, Outside) format. It combines OCR text recognition with entity tagging for key invoice elements.",
   "author": "redeipirati",
-  "contributors": [
-  ],
+  "contributors": ["carly-bartel"],
   "keywords": [
     "ner",
     "ocr",
