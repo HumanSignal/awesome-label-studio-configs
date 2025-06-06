@@ -6,7 +6,7 @@ This labeling config enables the first step of Named Entity Recognition (NER) on
 
 ## Preview
 
-![ner-tagging-invoices-preview](./preview/ner-tagging-invoices-preview.png)
+![ner-tagging-invoices-preview](./preview/ocr-invoices-pre-ner-bio-format.png)
 
 ---
 
