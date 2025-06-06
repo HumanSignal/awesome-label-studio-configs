@@ -3,8 +3,8 @@
   "name": "ocr-invoices-pre-ner-bio-format",
   "title": "OCR Invoices Pre-NER BIO Format",
   "description": "OCR text extraction and tokenization with BIO format for invoice documents. All tokens are initially tagged as 'O' (Outside) for subsequent NER tagging.",
-  "author": "meditas",
-  "contributors": ["redeipirati"],
+  "author": "redeipirati",
+  "contributors": ["carly-bartel"],
   "keywords": [
     "ocr",
     "ner",
@@ -14,7 +14,7 @@
     "text-extraction"
   ],
   "categories": [
-    "document processing",
+    "computer vision",
     "natural language processing"
   ],
   "configTags": [
