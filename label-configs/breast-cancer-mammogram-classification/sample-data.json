@@ -1,8 +1,8 @@
 {
   "data": {
-    "img1": "/storage-data/uploaded/?filepath=upload/154655/133bc824-l-cc.png",
-    "img2": "/storage-data/uploaded/?filepath=upload/154655/32dfd06a-r-cc.png",
-    "img3": "/storage-data/uploaded/?filepath=upload/154655/203571c7-l-mlo.png",
-    "img4": "/storage-data/uploaded/?filepath=upload/154655/1463c15a-r-mlo.png"
+    "img1": "https://raw.githubusercontent.com/HumanSignal/awesome-label-studio-configs/main/label-configs/breast-cancer-mammogram-classification/l-cc.png",
+    "img2": "https://raw.githubusercontent.com/HumanSignal/awesome-label-studio-configs/main/label-configs/breast-cancer-mammogram-classification/r-cc.png",
+    "img3": "https://raw.githubusercontent.com/HumanSignal/awesome-label-studio-configs/main/label-configs/breast-cancer-mammogram-classification/l-mlo.png",
+    "img4": "https://raw.githubusercontent.com/HumanSignal/awesome-label-studio-configs/main/label-configs/breast-cancer-mammogram-classification/r-mlo.png"
   }
 }
