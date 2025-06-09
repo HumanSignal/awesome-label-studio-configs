@@ -1,28 +1,21 @@
-<View style="display: flex; align-items: flex-start; gap: 1em;">
-  <!-- Left panel: labels + filter -->
-  <View style="min-width: 250px; padding: 0.5em; background: #f7f7f7; border-radius: 4px;">
-    <Header value="NER Tags" />
-    <Labels name="ner" toName="text" showInline="false">
-      <Label value="B-NIF"    background="#FF5733" />
-      <Label value="B-FORN"   background="#33FF57" />
-      <Label value="B-DATA"   background="#3375FF" />
-      <Label value="B-VALOR"  background="#FF33A1" />
-      <Label value="B-NUMFAT" background="#F3FF33" />
-      <Label value="I-NIF"    background="#FF5733" />
-      <Label value="I-FORN"   background="#33FF57" />
-      <Label value="I-DATA"   background="#3375FF" />
-      <Label value="I-VALOR"  background="#FF33A1" />
-      <Label value="I-NUMFAT" background="#F3FF33" />
-      <Label value="O"        background="#aaa"    />
-    </Labels>
-  </View>
+<View>
+  <!-- The image to annotate -->
+  <Image name="image" value="$image" zoomControl="true"/>
 
-  <!-- Right panel: text to annotate -->
-  <View style="flex: 1; max-height: 80vh; overflow-y: auto;">
-    <Text
-      name="text"
-      value="$ocr"
-      granularity="word"
-    />
-  </View>
+  <!-- Bounding-box control that will receive the "rectanglelabels" results
+       coming from your OCR model (from_name = "label") -->
+  <RectangleLabels name="label" toName="image" choice="single">
+    <!-- You only emit the generic "O" class, but feel free to add more labels -->
+    <Label value="O" background="#FFA500"/>
+  </RectangleLabels>
+
+  <!-- Per-region transcription box (from_name = "transcription").
+       Because perRegion="true", one TextArea is linked to each rectangle. -->
+  <TextArea name="transcription"
+            toName="image"
+            perRegion="true"
+            editable="true"
+            rows="1"
+            required="true"
+            placeholder="Type or correct OCR text…"/>
 </View>
