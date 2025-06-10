@@ -1,0 +1,21 @@
+<View>
+  <!-- The image to annotate -->
+  <Image name="image" value="$image" zoomControl="true"/>
+
+  <!-- Bounding-box control that will receive the "rectanglelabels" results
+       coming from your OCR model (from_name = "label") -->
+  <RectangleLabels name="label" toName="image" choice="single">
+    <!-- You only emit the generic "O" class, but feel free to add more labels -->
+    <Label value="O" background="#FFA500"/>
+  </RectangleLabels>
+
+  <!-- Per-region transcription box (from_name = "transcription").
+       Because perRegion="true", one TextArea is linked to each rectangle. -->
+  <TextArea name="transcription"
+            toName="image"
+            perRegion="true"
+            editable="true"
+            rows="1"
+            required="true"
+            placeholder="Type or correct OCR text…"/>
+</View>

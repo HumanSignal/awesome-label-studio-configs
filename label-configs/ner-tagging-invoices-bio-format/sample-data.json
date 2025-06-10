@@ -1,0 +1,5 @@
+[
+    {
+      "text": "INVOICE\n\nInvoice # 12345       Date 04/24/2024\n\nVendor\nItalian Restaurant\n123 Main Street\n123-455-7980\n\nDESCRIPTION   QTY   UNT   AMOUNT\nSpaghetti alia Carbonara     1     15.00   $15.00\nSpaghetti alla Matriciana    1     15.00   $15.00\nSaltimbocca alla Romana      1     20.00   $20.00\nSalad                        1      4.00   $4.00\n\n                          $66.54\n\nTax (22%)                            $6.54\n\nTotal"
+    }
+  ]

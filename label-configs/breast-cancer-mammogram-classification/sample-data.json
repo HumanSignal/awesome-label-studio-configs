@@ -1,0 +1,8 @@
+{
+  "data": {
+    "img1": "https://raw.githubusercontent.com/HumanSignal/awesome-label-studio-configs/main/label-configs/breast-cancer-mammogram-classification/l-cc.png",
+    "img2": "https://raw.githubusercontent.com/HumanSignal/awesome-label-studio-configs/main/label-configs/breast-cancer-mammogram-classification/r-cc.png",
+    "img3": "https://raw.githubusercontent.com/HumanSignal/awesome-label-studio-configs/main/label-configs/breast-cancer-mammogram-classification/l-mlo.png",
+    "img4": "https://raw.githubusercontent.com/HumanSignal/awesome-label-studio-configs/main/label-configs/breast-cancer-mammogram-classification/r-mlo.png"
+  }
+}
