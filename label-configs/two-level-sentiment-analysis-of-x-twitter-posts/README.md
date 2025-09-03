@@ -8,7 +8,7 @@ The text to label in the labeling interface is styled to look like a X / Twitter
 
 ## Preview
 
-![two-level-classification-preview](./preview/two-level-sentiment-analysis-of-x-twitter-posts.gif)
+![two-level-classification-preview](./preview/two-level-sentiment-analysis-of-x-twitter-posts.png)
 
 ---
 
