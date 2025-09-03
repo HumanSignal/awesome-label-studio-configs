@@ -21,12 +21,12 @@ Add the following required files:
 2. **Sample data** (e.g., tasks in JSON)
 3. **A README** that includes:
    - A clear title and description of the labeling config
-   - A preview section with screenshots/GIFs showing the config in action
+   - A preview section with screenshots showing the config in action
    - Author & Contributors section with GitHub usernames
    - Special Instructions section explaining any unique features or requirements
    - More Info section linking to the main repository README
 4. **A `preview/` folder** with:
-   - Screenshots/GIFs of the interface
+   - Screenshots of the interface
    - Any relevant visual documentation
 5. **A manifest.json file** with metadata about your config
 

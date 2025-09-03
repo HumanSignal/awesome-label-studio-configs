@@ -7,7 +7,7 @@ It highlights recognized entities (Person, Organization) within styled HTML text
 
 ## Preview
 
-![html-ner-tagging-preview](./preview/html-ner-tagging-preview.gif)
+![html-ner-tagging-preview](./preview/html-ner-tagging-preview.png)
 
 ---
 
