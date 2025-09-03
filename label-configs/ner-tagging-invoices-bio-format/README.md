@@ -6,7 +6,7 @@ This labeling config enables Named Entity Recognition (NER) on invoice documents
 
 ## Preview
 
-![ner-tagging-invoices-preview](./preview/ner-tagging-invoices-preview.png)
+![ner-tagging-invoices-preview](./preview/ner-tagging-invoices-preview.jpg)
 
 ---
 
